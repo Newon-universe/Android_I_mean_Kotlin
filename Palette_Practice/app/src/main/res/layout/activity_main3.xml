@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:background="@color/teal_200"/>
+    <!--  안드로이드 스튜디오의 기본 요소
+    속성 id, layout_width, layout_height, background 를 통해 view 의 기본적인 요소들을
+    설정할 수 있다.
+    -->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_weight="0.01"
+        tools:srcCompat="@tools:sample/avatars"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        />
+
+    <!-- View 를 상속받은 class.
+       tools:srcCompat="파일명"으로 원하는 이미지를 View 에 넣을 수 있다.
+       *background 로도 넣을 수 있지만, 이 경우 전체를 뒤덮기 때문에 다른 요소가 안 보이게 된다.
+        = src 는 패딩이 적용되지만 background 는 패딩이 적용 안된다.
+       android:adjustViewBounds="" 를 통해 이미지의 종횡비를 맞출 수 있다.
+       android:baselineAlignBottom="" 를 통해 ImageView 하단으로 정렬선을 맞출 수 있다.
+       *API 11 부터 지원한다.
+       android:baseline 으로 원하는 정렬선을 맞출 수도 있다.
+       android:scaleType="" 으로 내부 이미지를 정렬할 수 있다.
+       -->
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0" />
+
+    <!-- View 를 상속받은 class.
+        앱의 일부에 웹을 제공하려는 경우 사용.
+        웹의 탐색 컨트롤, 주소 표시줄 등 웹 브라우저의 기능은 전혀 포함되어 있지 않으며
+        기본적으로 웹페이지를 표시하는데 사용되는 기능
+
+        일반적으로 최종 사용자 계약이나 사용자 가이드 같은 덥데이트해야 할 정보를 앱에서 제공하는 경우 사용.
+        혹은 이메일과 같은 데이터를 가져오기 위해 항상 인터넷이 연결되어 있어야 하는 사용자에게 앱에서 데이ㅓ를 제공하는 경우
+        즉, WebView 를 통해 데이터를 파싱하고, 앱에서 재가공해서 표시하는 것이 가능.
+
+        uri, 브라우저 지정등은 자바나 코틀린으로 처리
+        https://web-inf.tistory.com/34
+        -->
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0" />
+
+    <!-- View-SurfaceView 를 상속받은 class.
+        웹에 존재하는 video를 재생하는 View.
+        MediaController, preview 등은 자바, 코틀린으로 설정
+        기본적으로 자막, 재생 기록등을 남기지 않기 때문에 추가 설정이 필요.
+        https://academy.realm.io/kr/posts/android-videoview/
+    -->
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_weight="0"
+        android:firstDayOfWeek="2"
+        android:maxDate="07/16/2021"
+        android:minDate="07/05/2021" />
+    <!--  OS에 내장되어 있는 Calender 를 표시하는 class.
+          View-ViewGroup-FrameLayout 를 상속받는 class.
+          android:firstDayOfWeek="" 1(일요일, default),2(월요일) // 요일 시작 지정 가능
+          android:focusedMonthDateColor="#FFF" // 현재 선택된 달의 배경색, API level 23 까지만 지원, Material style 에서 지원이 안된다.
+          android:unfocusedMonthDateColor="FFF" // 선택되지 않은 달의 배경, API level 23 까지만 지원, Material style 에서 지원이 안된다.
+          android:maxDate="mm/dd/yyyy" // 달력에 표시할 최대 날짜 설정
+          android:minDate="mm/dd/yyyy" // 달력에 표시할 최소 날짜 설정
+          https://parkho79.tistory.com/84
+           -->
+
+    <ProgressBar
+        android:id="@+id/progressBar_small"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_weight="0.01"
+        android:max="100"
+        android:progress="50"
+        android:secondaryProgress="75" />
+
+    <!--
+     style="?android:attr/progressBarStyleHorizontal" 속성으로 직선바 사용 가능 (혹은 ID로도 가능)
+     android:max="" 로 최대 값 표현
+     android:progress="" 로 현재 값 표현
+     android:secondaryProgress="" 로 진행할 값 표현 (progress 보다 연한 줄)
+     bar 는 width = "" 로 길이 조절 가능.
+     android:id="@+android:id/progress"
+     는 기본적인 사이즈의 원형 progress bar, 큰 걸 원하면 progress_large | 작은 걸 원하면 progress_small
+     -->
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:layout_weight="0.01"
+        android:max="100"
+        android:thumb="@mipmap/ic_launcher" />
+
+    <!-- 유저가 스스로 수치를 설정 가능한 bar.
+     android:max="" 로 최대 값 표현
+     android:progress="" 로 현재 값 표현
+     android:secondaryProgress="" 로 진행할 값 표현 (progress 보다 연한 줄)
+     android:thumb=""로 seekbar 모양 설정 가능
+     https://postiveemblem.tistory.com/166
+       -->
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.01"
+        android:max="10"
+        android:progress="3" />
+
+    <!--  유저가 스스로 수치를 설정 가능한 bar. 수치가 규격화되어 있다.
+     android:max="" 로 최대 값 표현
+     android:progress="" 로 현재 값 표현
+     android:secondaryProgress="" 로 진행할 값 표현 (progress 보다 연한 줄)
+     android:thumb=""로 seekbar 모양 설정 가능
+     https://postiveemblem.tistory.com/166
+      -->
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar"
+        android:layout_width="197dp"
+        android:layout_height="13dp"
+        android:layout_weight="0.01"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="10"
+        android:stepSize="1" />
+    <!-- 별점을 나타내는 bar.
+    android:isIndicator="" 로 단순하게 보여줄 별점인지, 평가자가 설정할 수 있는 별점인지 설정 가능(false 가 변경 가능)
+    android:numStars="" 로 표시할 별표 설정 가능
+    android:stepSize="" 로 드래그 시 한번에 평가되는 평점 단위 설정 가능
+    android:rating="" 로 디폴트 별점 값 설정 가능
+    style="@style/Widget.AppCompat.RatingBar. 에서 Indicator|Small로 크기 설정 가능
+    *(RatingBar > Indicator > Small)
+    https://lktprogrammer.tistory.com/180
+    -->
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_weight="0"
+        android:queryHint="Really"
+        android:iconifiedByDefault="false"/>
+
+    <!-- LinearLayout 에서 상속받는 class.
+        android:queryHint=""로 검색창을 눌렀을 때, 문구가 나오게 할 수 있다.
+        사용자가 무언가를 입력하면 사라진다.
+        android:iconifiedByDefault=""를 통해 Icon 화 되어 시작할지(접힌 상태로),
+        펼쳐진 상태로 시작할 지 설정할 수 있다.
+        background, padding 설정 가능하다.
+        https://parkho79.tistory.com/85
+    -->
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+         />
+
+    <!-- SurfaceTexture 와 View 를 합성한 class.
+        GPU 를 통해 이미지나 영상을 버퍼하는 View.
+        SurfaceView 보다 유연하게 사용할 수 있지만(이동,변경,애니매이션 등에서) 하드웨어를 직접 사용하므로 지연되거나 파워를 더 요구한다.
+        윈도우 하드웨어 가속을 지원하는 기기에서만 사용할 수 있다.
+        소프트웨어에서 렌더링하는 경우 textureView 는 아무것도 표시하지 않는다.
+        https://stackoverflow.com/questions/57512168/difference-between-textureview-surfaceview-texture-and-surface
+       -->
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" />
+
+
+    <!-- TextureView 처럼 View로서 내용을 표시하는 class.
+        모든 View들은 하나의 thread, main thread 를 통해서 동작하게 되나 이 경우
+        카메라 프리뷰, 동영상 재생등의 무거운 동작을 진행하면 쓰레드에 할당되는 자원이 부족해질 수 있다.
+        SurfaceView 는 다른 view 들과 달리 독립적인 thread 를 만들어서 자원을 할당받게 되며,
+        openGL 을 통해 가속도 지원되어 3D 출력도 가능하다.
+        SurfaceView - Surface - SurfaceHolder 구조로 되어 있으며,
+        SurfaceHolder 는 하나의 쓰레드를 열며, 자원을 받아 데이터 처리하고 surface 가 삭제(surfaceDestroyed 메소)(유저가 surface 시청 중지? 및 삭제?)
+        할 경우 쓰레드를 닫게 되는 역할, surface 의 구조적인 변화가 생길 때 surfaceChanged 메소드를 사용하여 변화한다.
+        https://dduddublog.tistory.com/68
+      -->
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?android:attr/listDivider"
+        android:shape="rectangle"
+        android:color="#BD1414"
+        android:radius="10dp"
+        />
+    <!-- Horizontal|Vertical Divider
+         레이아웃 내 View 들의 구분선을 쓸 때 사용한다.
+         android:shape=""  로 구분선 모양 지정 가능
+         android:color=""  로 색상 구분 가능
+       -->
+
+
+</LinearLayout>

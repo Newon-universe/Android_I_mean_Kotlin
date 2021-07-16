@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/downbar"
+    >
+<!--bottom navigation view-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:rowCount="1">
+
+        <ToggleButton
+            android:id="@+id/home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/downbar_shape"
+            android:scaleType="centerCrop"
+            android:textOff="홈"
+            android:textOn="홈" />
+
+        <ToggleButton
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/home"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/downbar_shape"
+            android:textOff="카테고리"
+            android:textOn="카테고리" />
+
+        <ToggleButton
+            android:id="@+id/feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/downbar_shape"
+            android:textOff="피드"
+            android:textOn="피드" />
+
+        <ToggleButton
+            android:id="@+id/saved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/downbar_shape"
+            android:textOff="저장"
+            android:textOn="저장" />
+
+        <ToggleButton
+            android:id="@+id/option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/downbar_shape"
+            android:textOff="마이"
+            android:textOn="마이" />
+    </GridLayout>
+
+</RelativeLayout>

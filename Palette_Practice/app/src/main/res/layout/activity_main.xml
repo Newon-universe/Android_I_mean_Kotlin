@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <!--    TextView, 설정한 text가 보인다.-->
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <!--   ems 속성은 해당 텍스트의 폰트 크기가 다르더라도,
+    ems 속성에 맞춰서 일정한 비율의 너비를 갖도록 함 -->
+    <!-- EditText, 유저가 Text를 입력할 수 있다. inputType으로 Text 조건 설정 가능
+     inputType : textPersonName는 이름 입력 가능. 새로운 라인 생성 불가, 일반 쿼티 키보드,
+     48dp 이상 필요, 오탈자에 빨간 밑줄 생기지 않음.
+     첫 글자 대문자를 디폴트로 주기 위해서, textPersonName|textCapWords  로 보완 가능
+     -->
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
+    <!-- inputType = "textPassword" 는 유저가 영문, 특수문자, 숫자를 포함한
+    비밀번호를 칠 수 있는 text 칸. 새로운 라인 생성 불가, 영문, 숫자, 특수문자 키보드.
+    48dp 이상 필요, 입력 후 해당 문자 블라인드 처리. -->
+
+    <EditText
+        android:id="@+id/editTextNumberPassword2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:minHeight="48dp" />
+    <!-- inputType = "numberPassword" 는 유저가 숫자 비밀번호를 칠 수 있는
+   text 칸. 새로운 라인 생성 불가, 숫자만 입력할 수 있는 키보드가 나온다.
+   48dp 이상 필요, 입력 후 해당 문자 블라인드 처리. -->
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
+
+    <!-- inputType="textEmailAddress" 는 유저가 이메일을 칠 수 있는 text 칸.
+       새로운 라인 생성 불가, 영문, 숫자, 특수문자 키보드와 함께 영문 키보드에 @가 추가되어서
+       나온다. 48dp 이상 필요.-->
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp" />
+
+    <!--  inputType="phone" 는 유저가 핸드폰 번호를 칠 수 있는 text 칸.
+      새로운 라인 생성 불가. 숫자에 핸드폰 입력에 특화된 키보드가 나온다.
+      48dp 이상 필요. -->
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp" />
+
+    <!--  inputType="textPostalAddress"는 유저가 주소를 입력할 수 있는 text 칸.
+      새로운 라인 생성 불가. 영문, 숫자, 특수문자 입력 가능한 키보드가 나온다.
+      48dp 이상 필요.
+      -->
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp" />
+
+    <!-- inputType="textMultiLine" 은 유저가 text를 입력할 수 있는 칸.
+    유저가 새로운 라인 생성 가능. 영문, 숫자, 특수문자 입력 가능한 키보드가 나온다.
+    48dp 이상 필요.
+     -->
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time" />
+
+    <!--  inputType="time" 은 유저가 시간을 입력할 수 있는 text 칸.
+      숫자와 시간 입력에 특화된 키보드가 나온다. 띄어쓰기가 안된다.
+      48dp 이상 필요.-->
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date" />
+
+    <!--  inputType="date" 은 유저가 날짜를 입력할 수 있는 text 칸.
+      숫자와 날짜 입력에 특화된 키보드가 나온다. 띄어쓰기가 안된다.
+      -->
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <!--  inputType="number" 은 유저가 숫자를 입력할 수 있는 text 칸.
+    숫자 키보드가 나온다. 띄어쓰기가 안된다. 다른 특수문자도 입력할 수 없다.
+     -->
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <!--  inputType="numberSigned" 은 유저가 숫자를 입력할 수 있는 text 칸.
+     숫자 키보드가 나오며, 띄어쓰기가 안된다. 하지만 부호를 위해 가장 맨 앞에 -는 붙일 수 있다.
+     -->
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <!--  inputType="numberDecimal" 은 유저가 숫자를 입력할 수 있는 text 칸.
+      숫자 키보드가 나오며, 띄어쓰기가 안된다. 부호도 입력이 안되지만 소수점은 가능하다.
+      -->
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AutoCompleteTextView" />
+    <!--  autoCompleteTextView 는 유저가 text 입력할 수 있는 text 칸.
+    새로운 라인 생성이 가능하다.
+    영문, 숫자, 특수문자 키보드가 나오며 유저가 스펠링이 틀리면 자동으로 고쳐준다.
+  -->
+
+    <!-- CheckedTextView 는 선택이 가능한 선택박스와 함께 나타나는 textview.
+   주요 속성으로  checkMark = 체크 상태를 표시하는 아이콘을 설정한다. android:attr/listChoiceIndicatorMultiple
+              checked = 체크 상태를 설정한다. true, false.
+              clickable = 클릭이 가능한지 설정한다. 이벤트 발생 이벤트 기능 구현이 필요.
+              drawable(Left,Right,Top,Bottom) 속성으로 text 옆 사진 가능.
+              -->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+<!--  EditText 상위호환. EditText 에 각종 이벤트를 넣어서
+ error 조건 설정, hint, text counter 등 사용 가능.
+ https://hongbeomi.medium.com/textinputlayout-textinputedittext-사용하기-d4043365a381
+ -->
+
+
+</LinearLayout>

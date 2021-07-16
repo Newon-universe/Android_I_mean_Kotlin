@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4"
+    android:orientation="vertical">
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+
+    <!-- 항목을 보여주는 class.
+       항목에 해당하는 내용을 values 내부에 xml 파일로 만들어주어야 하며,
+       kotlin 으로 이어주어야 한다.
+       데이터 목록을 아이템 단위의 뷰로 구성하여 화면에 표시하기 위해 "어댑터(Adapter)"를 사용한다.
+       리스트 중 한개 선택 (a,b,c,d,e 중 1개 / 날짜 중 1개 선택 등)에 사용된다.
+       https://bitsoul.tistory.com/43
+       -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        />
+
+    <!--    사용자가 관리하는 많은 수의 데이터 집합(Data Set)을 개별 아이템 단위로 구성하여 화면에 출력하는 뷰그룹(ViewGroup)이며,
+            한 화면에 표시되기 힘든 많은 수의 데이터를 스크롤 가능한 리스트로 표시해주는 위젯.
+            "리스트 표시를 위한 요소"들이 그러하듯, 데이터 목록을 아이템 단위의 뷰로 구성하여 화면에 표시하기 위해
+            "어댑터(Adapter)"를 사용한다.
+            유튜브 추천 목록 영상이 이에 해당한다.
+            https://recipes4dev.tistory.com/154
+            -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!--   수직 스크롤에 사용되며, scrollview 위젯 하나에는 하나의 자식만 사용할 수 있다.
+       스크롤뷰 내부는 다른 레이아웃도 사용할 수 있으나 일반적으로 LinearLayout 을 사용한다.
+       LinearLayout 내부에 다른 위젯을 사용하는 것으로 여러 자식을 넣을 수도 있다.
+       수직이므로 orientation 은 vertical 사용
+       https://yollo.tistory.com/6
+-->
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </HorizontalScrollView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!--   수평 스크롤에 사용되며, scrollview 위젯 하나에는 하나의 자식만 사용할 수 있다.
+    scrollview 에서 수평 스크롤을 위해 API 3 level 에서 개발되었다.
+   스크롤뷰 내부는 다른 레이아웃도 사용할 수 있으나 일반적으로 LinearLayout 을 사용한다.
+   LinearLayout 내부에 다른 위젯을 사용하는 것으로 여러 자식을 넣을 수도 있다.
+   수평이므로 orientation 은 horizontal 사용
+   https://yollo.tistory.com/6
+   https://hijjang2.tistory.com/32
+-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--  이중 스크롤에 사용된다. 즉, 스크롤 내부에 스크롤을 만들 때 사용된다.
+          다른 스크롤에서도 할 수 있으나 NestedScrollView 가 아니면 UI 측면에서 불편함을 야기한다.
+          여러개의 자식을 가질 수 있는 것도 장점.
+      -->
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--  RecycleView 와 비슷하게 여러 개의 데이터를 한번에 출력하되,
+          ViewPager2 의 자식을 페이지처럼 넘겨서 볼 수 있게 설계된 ViewGroup.
+          부가적으로 ViewPager2에 새롭게 추가된 기능은 다음과 같이 있다.
+RTL (right to left) layout support
+Vertical orientation support
+Reliable Fragment support
+Dataset change animations
+https://blog.gangnamunni.com/post/viewpager2/
+https://todaycode.tistory.com/26
+       -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!--  한 데이터의 묶음이 같은 양식을 사용하며 여러번 반복될 때 사용하는 ViewGroup
+          instagram, facebook 게시글, 카드 뉴스 등이 해당된다.
+          card_view:cardCornerRadius // 카드의 테두리를 원형으로 만든다.
+          CardView.setRadius // 코틀린에서 카드의 테두리를 변경할 때 사용한다.
+          card_view:cardBackgroundColor // 카드의 배경색을 설정한다.
+    -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+
+        android:layout_height="192dp"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:toolbarId="@+id/toolbar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+            app:contentScrim="?attr/colorPrimary">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"></androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+<!--  AppBarLayout, 화면의 상단 바를 의미한다.
+      GoogleMaterial Design 에 속하는 layout.
+      하나 이상의 자식 뷰와 어떤 특별한 상호작용을 하기 위해서는 CoordinatorLayout을 컨테이너로 사용해야 한다.
+      https://choheeis.github.io/newblog//articles/2020-10/AppBar
+-->
+<!--  BottomAppBar, 화면의 하단 바를 의미한다.
+      GoogleMaterial Design 에 속하는 layout.
+      하나 이상의 자식 뷰와 어떤 특별한 상호작용을 하기 위해서는 CoordinatorLayout을 컨테이너로 사용해야 한다.
+      https://namget.tistory.com/entry/BottomAppBar-안드로이드-BottomAppBar-예제
+  -->
+
+<!--  NavigationView,
+    내비게이션 드로어(Navigation Drawer)는 앱에서 사용 가능한 기능을 탐색할 수 있도록
+    Menu를 제공하는 화면이다.
+    기본적으로 화면의 가장자리에 숨겨져 있으며 왼쪽에서 오른쪽으로 스와이프 동작을 수행하거나
+    App Bar의 아이콘을 클릭하여 화면에 표시할 수 있다.
+      https://lktprogrammer.tistory.com/168
+      -->
+
+<!--    bottomNavigationView
+    하단에 위치한 내비게이션 드로어, 스크롤로 사라지게 할 수 있다.
+    https://lktprogrammer.tistory.com/183
+-->
+
+<!--  상단에 위치한 바, 앱에서 가장 중요한 액션 또는 가장 자주 사용되는 액션들을
+      제공하는 앱바(AppBar)를 만들 때 사용한다.
+      AppBarLayout은 OS에 따라 변화되며, 기본 내장된 Bar이지만
+      Toolbar 는 다른 위젯과 같이 선언하지 않으면 표시되지 않는 bar이며
+      필요하다면 중첩을 피하기 위해 NoActionBar를 설정해야 한다.
+      https://recipes4dev.tistory.com/149
+      -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0xxx"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1xxx"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2xxx"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+<!-- TabLayout | Tabitem
+    여러개의 탭을 설정할 수 있는 바.
+     TabLayout 에 <com.google.android.material.tabs.TabItem> 자식요소를 갖는다.
+     너무 많은 Tab이 있어 스크롤이 필요하다면 app:tabMode="scrollable" 를 설정한다.
+     https://recipes4dev.tistory.com/147
+-->
+
+<!-- View Stub
+    레이아웃에 사용 빈도가 매우 낮은 복잡한 뷰가 필요한 때가 있습니다.
+     종류(예: 항목 세부정보, 진행률 표시기 또는 실행취소 메시지)에 상관없이 필요할 때만 뷰를 로드하여
+     메모리 사용을 줄이고 렌더링 속도를 높일 수 있습니다.
+     특정 레이아웃에 들어가지 않고 단독으로 ViewStub 으로 존재하며,
+     필요시 Layout에서 ID를 호출하는 방식으로 사용된다.
+       https://developer.android.com/training/improving-layouts/loading-ondemand?hl=ko
+       -->
+
+<!--  다른 Activity 에서 여러번 반복되는 layout을 xml 파일로 따로 저장하고,
+       필요할 때 마다 부르는 속성
+       <include
+       layout="@layout/layout 파일명"
+        />
+       으로 지정한다.
+       https://arabiannight.tistory.com/58
+       -->
+
+<!-- <view>는 다른 뷰들을 포함하고 있거나 포함할 수 있는 View 들을 모아놓은 속성
+https://white-hacker.tistory.com/entry/Android-안드로이드-스튜디오-팔레트-정리
+-->
+
+
+</LinearLayout>
+

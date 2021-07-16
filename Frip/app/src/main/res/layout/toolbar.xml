@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <ImageButton
+        android:id="@+id/speech_bubble"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:padding="0sp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/speech_bubble" />
+
+    <Button
+        android:id="@+id/region_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="전국"
+        android:drawableEnd="@drawable/config_down_arrow"
+        android:background="#00000000"
+        />
+
+
+</RelativeLayout>
