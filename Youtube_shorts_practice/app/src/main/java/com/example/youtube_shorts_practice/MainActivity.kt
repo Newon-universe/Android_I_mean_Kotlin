@@ -107,12 +107,29 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        // 부메랑 만들기
         binding.createShorts.setOnClickListener{
-            val intent = Intent(this, CameraActivity::class.java)
-            startActivity(intent)
+            val cameraIntent = Intent(this, CameraActivity::class.java)
+            startActivity(cameraIntent)
             moveShorts = true
         }
 
+
+        // 공유하기
+        binding.share.setOnClickListener{
+
+            binding.videoView.pause()
+
+            val sharingIntent = Intent (Intent.ACTION_SEND)
+
+            sharingIntent.addCategory(Intent.CATEGORY_DEFAULT)
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, "https://play.google.com/store/apps/details?id=$packageName")
+
+            sharingIntent.putExtra(Intent.EXTRA_TITLE, "Youtube_shrots")
+            sharingIntent.setType("text/plain")
+            startActivity(Intent.createChooser(sharingIntent, "앱을 선택해주세요."))
+
+        }
         Log.d(TAG, "MainActivity - onCreate() called")
     }
 
