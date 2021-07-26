@@ -26,6 +26,8 @@ class CustomAdapter(context: Context, private val businessCardArraylist:ArrayLis
         binding.nameListviewItem.text=businessCardArraylist[position].name
         binding.contentListviewItem.text=businessCardArraylist[position].content
 
+
+
         return binding.root
     }
 }
