@@ -14,5 +14,6 @@
      <br/>
      <ul>
         <li> 커스텀 뷰로 이미 만든 뷰도 상속할 수 있다고 하니 시도해보기 </li>
+        <li> 2021.08.03 -> 이미지뷰에 view.x , view.y , view.width , view.height 를 활용해서 collision 함수를 만들었다.
      </ul>
 </span>
