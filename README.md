@@ -14,6 +14,7 @@
      <br/>
      <ul>
         <li> 커스텀 뷰로 이미 만든 뷰도 상속할 수 있다고 하니 시도해보기 </li>
-        <li> 2021.08.03 -> 이미지뷰에 view.x , view.y , view.width , view.height 를 활용해서 collision 함수를 만들었다.
+        <li> 2021.08.03 -> 이미지뷰에 view.x , view.y , view.width , view.height 를 활용해서 collision 함수를 만들었다.</li>
+        <li> 2021.08.03 -> 기존의 뷰의 전체 레이아웃을 merge 로 바꾸고, 커스텀뷰를 만든 뒤 init 으로 해당 레이아웃을 불러오면 기존의 레이아웃에 내가 만든 커스텀뷰를 사용할 수 있다. </li>
      </ul>
 </span>
