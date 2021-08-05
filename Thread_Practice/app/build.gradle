@@ -47,6 +47,9 @@ dependencies {
     implementation 'io.github.controlwear:virtualjoystick:1.10.1'
     //코루틴 라이브러리
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1"
+    //
+    def lottieVersion = "3.7.2"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

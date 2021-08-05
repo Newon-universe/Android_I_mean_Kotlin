@@ -10,11 +10,13 @@ import java.util.logging.Handler as Handler1
 fun crash(image1: ImageView, image2: ImageView):Boolean {
     var check = false;
 
-    if (Math.abs(   (image1.x - image2.x) + ( (image1.width - image2.width) / 2)    )
-        < (image2.width + image1.width )/2 &&
-        Math.abs(   (image1.y - image2.y) + ( (image1.height - image2.height) / 2)  )
-        < (image2.height + image1.height )/2)
-        check = true
+    Thread(){
+        if (Math.abs(   (image1.x - image2.x) + ( (image1.width - image2.width) / 2)    )
+            < (image2.width + image1.width )/2 &&
+            Math.abs(   (image1.y - image2.y) + ( (image1.height - image2.height) / 2)  )
+            < (image2.height + image1.height )/2)
+            check = true
+    }.start()
 
     return check
 }
