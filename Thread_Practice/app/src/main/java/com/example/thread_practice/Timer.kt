@@ -7,6 +7,7 @@ import android.widget.TextView
 class Timer(context: Context) {
     var minute = 1
     var second = 30
+    val totalTime = minute * 60 + second
 
     var handler: Handler = Handler()
 

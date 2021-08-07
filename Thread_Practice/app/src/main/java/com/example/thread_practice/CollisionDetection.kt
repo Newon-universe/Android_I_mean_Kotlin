@@ -1,6 +1,5 @@
 package com.example.thread_practice
 
-
 import android.util.Log
 import android.widget.ImageView
 import kotlin.math.abs
@@ -16,13 +15,12 @@ fun crash(image1: ImageView, image2: ImageView):Boolean {
         abs(   (image1.y - image2.y) + ( (image1.height - image2.height) / 2)  )
         < (image2.height + image1.height )/2){
         check = true
-
     }
 
     return check
 }
 
-fun time(from: Int, to: Int) : Int {
+fun timeRandom(from: Int, to: Int) : Int {
     var number = Random
     return number.nextInt(to - from) + from
 }

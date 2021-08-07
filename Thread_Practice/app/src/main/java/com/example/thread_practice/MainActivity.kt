@@ -30,32 +30,15 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val TAG = "조이스틱"
-
-    var handler: Handler = Handler()
-    var runnable: Runnable = Runnable {  }
-
-
-    var selectedView: ImageView? = null
-
-
-    var checker: Int = 90
-
-//    lateinit var g_playerLoc:IntArray
-//    lateinit var g_somethingLoc:IntArray
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        val timer = time(500, 2500).toLong()
-
         val minute = binding.minute
         val second = binding.second
-        with(Timer(this)){
+        with(Timer(this)) {
             timeThread(minute, second).isDaemon = true
             timeThread(minute, second).start()
         }
@@ -67,69 +50,22 @@ class MainActivity : AppCompatActivity() {
         JoyStick(this).joyStickCall(joystick, player, topMargin, playGround)
 
 
-
-
-
-        val shooterThread = Thread(){
-            while(checker >= 0){
-                Thread.sleep(1000)
-                checker--
-                if(checker % 4 == 0){
-                    handler.post {
-                        somethingMove(binding.something1, binding.player, -2000f, 3000)
-                        if (binding.something1.x <= 1000f){
-                            binding.something1.x = 1780F
-                            binding.something1.visibility = View.VISIBLE
-                        }
-                    }
-                    Log.d(TAG, "checker : $checker")
-                }
-            }
+        val missile1 = binding.something1
+        val missile2 = binding.something2
+        val missile3 = binding.something3
+        val missile4 = binding.something4
+        with(Missile(this)){
+            shooting(4, missile1, player, 2000)
+            shooting(10, missile1, player, 2000)
+            shooting(10, missile2, player, 2500)
+            shooting(10, missile3, player, 3000)
+            shooting(10, missile4, player, 3500)
+            shooting(13, missile1, player, 2000)
+            shooting(14, missile4, player, 2000)
+            shooting(15, missile2, player, 2000)
+            shooting(15, missile3, player, 2000)
         }
-        shooterThread.isDaemon = true
-        shooterThread.start()
-
-
-//        while(checker >= 0) {
-//            if (checker % 4 == 0) {
-//                somethingMove(binding.something1, binding.player, -2000f, 3000)
-//                if (binding.something1.x <= 1000f) {
-//                    binding.something1.x = 1780F
-//                    Log.d(TAG, "checker : $checker")
-//                }
-//            }
-//            checker--
-//        }
 
 
     }
-
-
-    fun somethingMove(something: ImageView, playerView:ImageView,posix: Float, duration1: Long) {
-
-        var animation: ObjectAnimator
-        val moveThread: Thread
-
-        moveThread = Thread(){
-            handler.post{
-                animation = ObjectAnimator.ofFloat(something, "translationX", posix).apply {
-                    duration = duration1
-                    interpolator = LinearInterpolator()
-                    start()
-                }
-                animation.addUpdateListener(ValueAnimator.AnimatorUpdateListener(){
-                    if(crash(something, playerView)){
-                        something.visibility = View.INVISIBLE
-                        Log.d(TAG, "CRUSH!!")
-                    } else
-                        Log.d(TAG, "${crash(something, playerView)}")
-                })
-            }
-        }
-        moveThread.isDaemon = true
-
-    }
-
-
 }
-

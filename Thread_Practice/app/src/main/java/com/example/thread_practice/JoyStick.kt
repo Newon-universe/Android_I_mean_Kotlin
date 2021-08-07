@@ -25,8 +25,8 @@ class JoyStick(context: Context) {
             val nextX = (strength * 0.3 * cos((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
             val nextY = (strength * 0.3 * sin((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
 
-            val restrictionX:Float = 2000f
-//                playGround.x - playGround.width/2 - 14
+            val restrictionX:Float = playGround.x - playGround.width/2 - 14
+
             val restrictionTopY:Float = topMargin.y
             val restrictionBottomY:Float = playGround.height.toFloat()
 
@@ -44,32 +44,32 @@ class JoyStick(context: Context) {
 
     fun joystickMove(playerView: ImageView, posix:Float, posiy:Float, nextX:Float, nextY:Float, topMargin: ImageView, playGround: LinearLayout, duration1: Long) {
 
-        val restrictionX:Float = 2000f
-//            playGround.x - playGround.width/2 - 14
+        val restrictionX:Float = playGround.x - playGround.width/2 - 14
+
         val restrictionTopY:Float = topMargin.y
         val restrictionBottomY:Float = playGround.height.toFloat()
 
 
         // 이동 예외처리 - 경계선 스턱 보정
         runnable = Runnable {
-            if (playerView.x + nextX <= 0)
-                playerView.x = 0.toFloat()
-            else if (playerView.x + nextX >= restrictionX)
-                playerView.x = restrictionX
-            else {
-                ObjectAnimator.ofFloat(playerView, "translationX", posix).apply {
-                    duration = duration1
-                    start()
+            when {
+                playerView.x + nextX <= 0 -> playerView.x = 0.toFloat()
+                playerView.x + nextX >= restrictionX -> playerView.x = restrictionX
+                else -> {
+                    ObjectAnimator.ofFloat(playerView, "translationX", posix).apply {
+                        duration = duration1
+                        start()
+                    }
                 }
             }
-            if (playerView.y + nextY <= restrictionTopY)
-                playerView.y = restrictionTopY
-            else if (playerView.y + nextY >= restrictionBottomY)
-                playerView.y = restrictionBottomY
-            else {
-                ObjectAnimator.ofFloat(playerView, "translationY", posiy).apply {
-                    duration = duration1
-                    start()
+            when {
+                playerView.y + nextY <= restrictionTopY -> playerView.y = restrictionTopY
+                playerView.y + nextY >= restrictionBottomY -> playerView.y = restrictionBottomY
+                else -> {
+                    ObjectAnimator.ofFloat(playerView, "translationY", posiy).apply {
+                        duration = duration1
+                        start()
+                    }
                 }
             }
 
