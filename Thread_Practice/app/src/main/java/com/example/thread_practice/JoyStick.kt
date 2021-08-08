@@ -19,11 +19,14 @@ class JoyStick(context: Context) {
     private var y: Float = 0.0F
 
     fun joyStickCall(joystick: JoystickView, player: LottieAnimationView, topMargin: ImageView, playGround: LinearLayout){
+
+        val sensitivity = 0.2
+
         val joystick: JoystickView = joystick
         joystick.setOnMoveListener({ angle: Int, strength: Int ->
 
-            val nextX = (strength * 0.3 * cos((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
-            val nextY = (strength * 0.3 * sin((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
+            val nextX = (strength * sensitivity * cos((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
+            val nextY = (strength * sensitivity * sin((1 - angle.toFloat() / 360) * 2 * PI)).toFloat()
 
             val restrictionX:Float = playGround.x - playGround.width/2 - 14
 

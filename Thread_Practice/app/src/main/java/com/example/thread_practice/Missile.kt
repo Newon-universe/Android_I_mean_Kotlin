@@ -12,7 +12,7 @@ import com.airbnb.lottie.LottieAnimationView
 
 class Missile(context: Context) {
 
-    var handler: Handler = Handler()
+    val handler: Handler = Handler()
 
     fun shooting(time: Int, missile: ImageView, player: LottieAnimationView, speed: Long) {
         var shootTime: Int = time

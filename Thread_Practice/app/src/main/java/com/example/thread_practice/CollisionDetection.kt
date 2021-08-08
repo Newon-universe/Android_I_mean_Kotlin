@@ -1,9 +1,7 @@
 package com.example.thread_practice
 
-import android.util.Log
 import android.widget.ImageView
 import kotlin.math.abs
-import kotlin.math.log
 import kotlin.random.Random
 import java.lang.Runnable as Runnable
 
