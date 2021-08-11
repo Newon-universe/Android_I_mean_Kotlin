@@ -15,3 +15,41 @@ object LoginClient {
             .build()
 
 }
+
+object UserTierClient {
+
+    val sRetrofit = initRetrofit()
+    private const val USER_TIER_URL = "https://kr.api.riotgames.com/tft/league/v1/entries/by-summoner/"
+
+    private fun initRetrofit() : Retrofit =
+        Retrofit.Builder()
+            .baseUrl(USER_TIER_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+}
+
+object GameNameClient{
+    val sRetrofit = initRetrofit()
+    private const val GAME_URL = "https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/"
+
+    private fun initRetrofit() : Retrofit =
+        Retrofit.Builder()
+            .baseUrl(GAME_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+}
+
+object GameClient {
+
+    val sRetrofit = initRetrofit()
+    private const val GAME_URL = "https://kr.api.riotgames.com/tft/league/v1/entries/by-summoner/"
+
+    private fun initRetrofit() : Retrofit =
+        Retrofit.Builder()
+            .baseUrl(GAME_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+}
