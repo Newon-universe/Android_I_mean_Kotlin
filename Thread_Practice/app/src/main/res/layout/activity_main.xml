@@ -9,6 +9,20 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/background2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:lottie_fileName="background2.json"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_speed="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMargin"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -57,9 +71,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/imageView2"
         app:layout_constraintTop_toBottomOf="@id/topMargin"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintHorizontal_bias="0.3"
         android:weightSum="4"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="invisible">
 
         <ImageView
             android:id="@+id/obstacle1"
@@ -102,6 +117,7 @@
         android:layout_height="110dp"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:background="#00000000"
         app:lottie_autoPlay="true"
         app:lottie_fileName="cat.json"
         app:lottie_loop="true"
@@ -212,7 +228,7 @@
         android:id="@+id/second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=": 00"
+        android:text=":00"
         android:textColor="@color/black"
         android:textSize="19sp"
         app:layout_constraintStart_toEndOf="@id/minute"

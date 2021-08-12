@@ -6,6 +6,7 @@ import android.content.Context
 import android.os.Handler
 import android.util.Log
 import android.view.View
+import android.view.animation.AlphaAnimation
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 import com.airbnb.lottie.LottieAnimationView
@@ -13,8 +14,9 @@ import com.airbnb.lottie.LottieAnimationView
 class Missile(context: Context) {
 
     val handler: Handler = Handler()
+    val mainThis = context
 
-    fun shooting(time: Int, missile: ImageView, player: LottieAnimationView, speed: Long) {
+    fun shooting(time: Int, missile: ImageView, player: LottieAnimationView, speed: Long, oops: View) {
         var shootTime: Int = time
         var canShoot: Boolean = true
 
@@ -26,7 +28,7 @@ class Missile(context: Context) {
                 if (shootTime == 0 && canShoot) {
                     canShoot = false
                     handler.post {
-                        somethingMove(missile, player, -2000f, speed)
+                        somethingMove(missile, player, -2000f, speed, oops)
                         if (missile.x <= 0f) {
                             missile.x = 1780F
                             canShoot = true
@@ -41,7 +43,7 @@ class Missile(context: Context) {
 
 
 
-    fun somethingMove(missile: ImageView, playerView: ImageView, posix: Float, speed: Long) {
+    fun somethingMove(missile: ImageView, playerView: ImageView, posix: Float, speed: Long, oops:View) {
 
         var animation: ObjectAnimator
 

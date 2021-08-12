@@ -2,7 +2,9 @@ package com.example.thread_practice
 
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.media.MediaPlayer
 import android.os.Handler
+import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.airbnb.lottie.LottieAnimationView

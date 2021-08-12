@@ -4,10 +4,10 @@ import android.content.Context
 import android.os.Handler
 import android.widget.TextView
 
-class Timer(context: Context) {
-    var minute = 1
-    var second = 30
-    val totalTime = minute * 60 + second
+class Timer(context: Context, duration: Int) {
+    var minute: Int = duration/60
+    var second: Int = duration - minute*60
+    val totalTime = duration/1000 + 1
 
     var handler: Handler = Handler()
 
