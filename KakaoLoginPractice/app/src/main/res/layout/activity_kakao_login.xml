@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KakaoLoginActivity"
+    android:background="#E6F3FE">
+
+    <ImageView
+        android:id="@+id/profileCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/btn"
+        android:layout_margin="20dp"/>
+
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="140dp"
+        android:layout_height="180dp"
+        android:background="@color/white"
+        android:scaleType="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"/>
+
+    <TextView
+        android:id="@+id/nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임: "
+        android:textSize="43sp"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintTop_toTopOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/emailFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textSize="10sp"
+        android:textColor="#959595"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/nickname"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="email"
+        android:textSize="15sp"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/emailFormat"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/birthdayFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="birthday"
+        android:textSize="10sp"
+        android:textColor="#959595"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/email"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MM/DD"
+        android:textSize="15sp"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/birthdayFormat"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/nationFormat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="birthday"
+        android:textSize="10sp"
+        android:textColor="#959595"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/birthday"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/nation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="해외 유저"
+        android:textSize="12sp"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        app:layout_constraintStart_toEndOf="@id/profile"
+        app:layout_constraintEnd_toEndOf="@id/profileCard"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/nationFormat"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/sample"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="최근 주문 내역"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/rixgob"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/profileCard"
+        app:layout_constraintTop_toBottomOf="@id/profileCard"
+        app:layout_constraintBottom_toTopOf="@id/orderCard"/>
+
+    <ImageView
+        android:id="@+id/orderCard"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sample" />
+
+    <ImageView
+        android:id="@+id/pic1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="@id/orderCard"
+        app:layout_constraintEnd_toEndOf="@id/orderCard"
+        app:layout_constraintTop_toTopOf="@id/orderCard"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:src="@drawable/food1"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/food4"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintStart_toStartOf="@id/pic1"
+        app:layout_constraintEnd_toEndOf="@id/pic1"
+        app:layout_constraintTop_toBottomOf="@id/pic1"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/pic2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="@id/orderCard"
+        app:layout_constraintEnd_toEndOf="@id/orderCard"
+        app:layout_constraintTop_toTopOf="@id/orderCard"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:src="@drawable/food2"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/food5"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintStart_toStartOf="@id/pic2"
+        app:layout_constraintEnd_toEndOf="@id/pic2"
+        app:layout_constraintTop_toBottomOf="@id/pic2"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/pic3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toStartOf="@id/orderCard"
+        app:layout_constraintEnd_toEndOf="@id/orderCard"
+        app:layout_constraintTop_toTopOf="@id/orderCard"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:src="@drawable/food3"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/food6"
+        android:scaleType="fitXY"
+        android:background="@drawable/btn"
+        app:layout_constraintStart_toStartOf="@id/pic3"
+        app:layout_constraintEnd_toEndOf="@id/pic3"
+        app:layout_constraintTop_toBottomOf="@id/pic3"
+        app:layout_constraintBottom_toBottomOf="@id/orderCard"
+        android:layout_marginBottom="10dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/kakaoLogoutButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:textSize="20sp"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        android:background="@drawable/btn"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/kakaoUnlinkButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:fontFamily="@font/cafe24_ssurround_air"
+        android:text="회원 탈퇴"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kakaoLogoutButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
