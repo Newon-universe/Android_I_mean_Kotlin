@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/my_shop_options_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp"
+        android:outlineProvider="none">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/my_shop_options_back_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_goods_main_toolbar_arrow_back_24"
+            android:tint="@color/black"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/my_shop_options_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/my_login_options_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_medium"
+            android:src="@drawable/ic_goods_main_toolbar_arrow_back_24"
+            android:tint="@color/black"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@id/my_shop_options_toolbar"
+            app:layout_constraintBottom_toBottomOf="@id/my_shop_options_toolbar"
+            app:layout_constraintStart_toEndOf="@id/my_shop_options_back_arrow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/my_shop_options_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/my_login_logout"
+        android:textColor="@color/redForText"
+        android:textSize="13sp"
+        android:fontFamily="@font/roboto_regular"
+        style="@style/Widget.AppCompat.EditText"/>
+
+
+
+
+</LinearLayout>

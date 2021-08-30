@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="5dp">
+
+    <ImageView
+        android:id="@+id/goods_main_information_container"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:background="@drawable/goods_main_information_card_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/goods_main_information_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goods_main_information_model_number"
+        android:textColor="@color/greyForText"
+        android:textSize="10sp"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/goods_main_information_content"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="45dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/goods_main_information_model_sample"
+        android:textSize="15sp"
+        android:textColor="@color/blackForText"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toBottomOf="@id/goods_main_information_sort"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

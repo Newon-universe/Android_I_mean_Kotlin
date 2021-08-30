@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:foreground="?attr/selectableItemBackground">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="205dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp">
+
+        <ImageView
+            android:id="@+id/goods_view_item_image"
+            android:layout_width="205dp"
+            android:layout_height="205dp"
+            android:src="@drawable/home_today_recycle_sample_img"
+            android:background="@drawable/shape_home_today_card"
+            android:backgroundTint="@color/goods_sample"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/goods_view_item_brand"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/home_today_recycle_sample_logo"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toBottomOf="@id/goods_view_item_image"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/goods_view_item_interest_size"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:scaleType="center"
+            android:backgroundTint="@color/transparency"
+            android:src="@drawable/ic_home_today_goods_bookmark"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/goods_view_item_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/goods_view_item_brand"
+            app:layout_constraintHorizontal_bias="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/goods_view_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:maxWidth="175dp"
+            android:maxHeight="35dp"
+            android:text="@string/home_today_recycle_item_goods_name_sample"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/goods_view_item_brand"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/goods_view_item_buy_btn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="@string/home_today_recycle_upcoming_item_buy_button"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_home_today_upcoming_items_buy"
+            app:layout_constraintTop_toBottomOf="@id/goods_view_item_name"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".src.main.my.myProfile.MyProfileFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/my_shop_profile_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.2">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/my_shop_profile_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:shapeAppearanceOverlay="@style/circle"
+                    app:srcCompat="@drawable/ic_my_main_default_profile"
+                    android:background="@color/my_profile_background_default_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="10dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_profile_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_nickname_sample"
+                    android:textSize="17sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_profile_img"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_profile_img"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:text="@string/my_shop_profile_edit"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@drawable/my_shop_profile_edit_btn_shape"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_profile_nickname"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_profile_nickname" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_profile_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_id_sample"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_profile_img"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/home_today_barrier_color"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_profile_id"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fitsSystemWindows="true"
+        android:fillViewport="true"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_grade_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_grade_sample"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_point_tv"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_point_tv"
+                    app:layout_constraintHorizontal_bias="0.4"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_grade_notification_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_grade_notification"
+                    android:textSize="11sp"
+                    android:textColor="@color/greyForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_grade_tv"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_grade_tv"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_grade_tv"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_point_notification_tv"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_point_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_point_sample"
+                    android:textSize="16sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_point_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_point_scale"
+                    android:textSize="16sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_point_tv"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_point_notification_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_point_notification"
+                    android:textSize="11sp"
+                    android:textColor="@color/greyForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_point_tv"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_point_scale"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_point_tv"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_interest_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_interest_sample"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_point_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_point_tv"
+                    app:layout_constraintHorizontal_bias="0.6"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_interest_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_interest_notification"
+                    android:textSize="11sp"
+                    android:textColor="@color/greyForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_interest_tv"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_interest_tv"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_interest_tv"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_point_notification_tv"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_buy_record"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_buy_record_more"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_notification"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_buy_record_notification"
+                    android:layout_marginEnd="15dp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/my_shop_buy_record_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shop_profile_buy_sell_record_btn_shape"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_buy_record_notification"/>
+
+                <View
+                    android:id="@+id/my_shop_buy_record_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_buy_record_container"
+                    android:background="@color/goods_main_btm_nav_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_total_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_total"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_buy_record_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_total_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/redForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_buy_record_total_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_buy_record_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_bidding_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/my_shop_record_biding"
+                    android:textColor="@color/blackForText"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_buy_record_progressing_notification"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_buy_record_divider"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_total_notification" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_bidding_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_buy_record_bidding_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_bidding_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_buy_record_bidding_notification"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_progressing_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_progressing"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_buy_record_bidding_notification"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_buy_record_done_notification"
+                    app:layout_constraintHorizontal_bias="0.3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_progressing_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_buy_record_progressing_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_progressing_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_buy_record_progressing_notification"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_done_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_done"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_buy_record_container"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_buy_record_progressing_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_buy_record_container"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_buy_record_done_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_buy_record_done_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_buy_record_done_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_buy_record_done_notification"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_sell_record"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_buy_record_more"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_notification"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_sell_record_notification"
+                    android:layout_marginEnd="15dp"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/my_shop_sell_record_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shop_profile_buy_sell_record_btn_shape"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_sell_record_notification"/>
+
+                <View
+                    android:id="@+id/my_shop_sell_record_divider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_sell_record_container"
+                    android:background="@color/goods_main_btm_nav_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_total_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_total"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_sell_record_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_total_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/greenForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_sell_record_total_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_sell_record_divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_bidding_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/my_shop_record_biding"
+                    android:textColor="@color/blackForText"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_sell_record_progressing_notification"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_sell_record_divider"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_total_notification" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_bidding_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_sell_record_bidding_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_bidding_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_sell_record_bidding_notification"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_progressing_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_progressing"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_sell_record_bidding_notification"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_sell_record_done_notification"
+                    app:layout_constraintHorizontal_bias="0.3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_progressing_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_sell_record_progressing_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_progressing_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_sell_record_progressing_notification"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_done_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_done"
+                    android:textSize="12sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_sell_record_container"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_sell_record_progressing_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_sell_record_container"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_sell_record_done_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_record_none"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_sell_record_done_notification"
+                    app:layout_constraintStart_toStartOf="@id/my_shop_sell_record_done_notification"
+                    app:layout_constraintEnd_toEndOf="@id/my_shop_sell_record_done_notification"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/home_today_barrier_color"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/my_shop_holding_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_holding_items_notification"
+                    android:textSize="15sp"
+                    android:textColor="@color/blackForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_shop_buy_record_more"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/my_shop_holding_items"
+                    app:layout_constraintBottom_toBottomOf="@id/my_shop_holding_items"
+                    android:layout_marginEnd="15dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/my_shop_holding_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_holding_items"
+                    style="@style/TextAppearance.AppCompat.Button"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_total_holding_valuation_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_holding_total_value"
+                        android:textSize="11sp"
+                        android:textColor="@color/blackForText"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_total_holding_valuation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_record_none"
+                        android:textSize="9sp"
+                        android:textColor="@color/blackForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintHorizontal_bias="0.96"
+                        app:layout_constraintStart_toEndOf="@id/my_shop_total_holding_valuation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/my_shop_total_holding_valuation_notification"
+                        app:layout_constraintBottom_toBottomOf="@id/my_shop_total_holding_valuation_notification"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_count_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_holding_count"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toStartOf="@id/my_shop_total_holding_valuation_notification"
+                        app:layout_constraintTop_toBottomOf="@id/my_shop_total_holding_valuation_notification"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_record_none"
+                        android:textSize="11sp"
+                        android:textColor="@color/blackForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintStart_toEndOf="@id/my_shop_holding_count_notification"
+                        app:layout_constraintEnd_toStartOf="@id/my_shop_holding_bought_price_notification"
+                        app:layout_constraintTop_toBottomOf="@id/my_shop_total_holding_valuation_notification"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_yield_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_holding_yield"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="@id/my_shop_total_holding_valuation_notification"
+                        app:layout_constraintTop_toBottomOf="@id/my_shop_holding_count_notification"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_yield"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_record_none"
+                        android:textSize="11sp"
+                        android:textColor="@color/blackForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintStart_toEndOf="@id/my_shop_holding_yield_notification"
+                        app:layout_constraintEnd_toStartOf="@id/my_shop_holding_valuation_p_l_notification"
+                        app:layout_constraintTop_toTopOf="@id/my_shop_holding_yield_notification"
+                        app:layout_constraintBottom_toBottomOf="@id/my_shop_holding_yield_notification"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_bought_price_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_holding_bought_price"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="15dp"
+                        app:layout_constraintStart_toEndOf="@id/my_shop_holding_count_notification"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.55"
+                        app:layout_constraintTop_toBottomOf="@id/my_shop_total_holding_valuation_notification"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_bought_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_record_none"
+                        android:textSize="11sp"
+                        android:textColor="@color/blackForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintHorizontal_bias="0.885"
+                        app:layout_constraintStart_toEndOf="@id/my_shop_holding_bought_price_notification"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/my_shop_holding_count"
+                        app:layout_constraintBottom_toBottomOf="@id/my_shop_holding_count"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_valuation_p_l_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_holding_valuation_p_l"
+                        android:textSize="11sp"
+                        android:textColor="@color/greyForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintStart_toStartOf="@id/my_shop_holding_bought_price_notification"
+                        app:layout_constraintEnd_toEndOf="@id/my_shop_holding_bought_price_notification"
+                        app:layout_constraintTop_toBottomOf="@id/my_shop_holding_bought_price_notification"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/my_shop_holding_valuation_p_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_shop_record_none"
+                        android:textSize="11sp"
+                        android:textColor="@color/blackForText"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto_regular"
+                        app:layout_constraintStart_toStartOf="@id/my_shop_holding_bought_price"
+                        app:layout_constraintEnd_toEndOf="@id/my_shop_holding_bought_price"
+                        app:layout_constraintTop_toTopOf="@id/my_shop_holding_valuation_p_l_notification"
+                        app:layout_constraintBottom_toBottomOf="@id/my_shop_holding_yield_notification"/>
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/home_today_barrier_color"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_notification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_notification"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_inspection_standard"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_inspection_standard"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_inspection_standard"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_notification"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_penalty_policy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_penalty_policy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_penalty_policy"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_inspection_standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_usage_policy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_usage_policy"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_show_room_introduction"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_notification"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_show_room_introduction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_show_room_introduction"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_usage_policy"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_seller_visit_reception"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_inspection_standard"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_seller_visit_reception"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_seller_visit_reception"
+                    android:textSize="14sp"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_regular"
+                    android:background="@color/white"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_marginTop="1dp"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_show_room_introduction"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_penalty_policy"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_today_scroll_customer_service_center"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_today_scroll_customer_service_weekday_business_hour"
+                android:textSize="12sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_today_scroll_customer_service_weekday_launch_break"
+                android:textSize="12sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_frequently_asked_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_black_solid_rounded_corner"
+                    android:text="@string/home_today_scroll_frequently_asked"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/my_shop_one_on_one_ask_btn"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/my_shop_one_on_one_ask_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_black_strok_white_solid"
+                    android:text="@string/home_today_scroll_one_on_one_ask"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toEndOf="@id/my_shop_frequently_asked_btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/my_shop_one_on_one_ask_btn"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

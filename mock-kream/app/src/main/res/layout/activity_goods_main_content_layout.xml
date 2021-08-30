@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:descendantFocusability="blocksDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_main_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_main_brand_sample"
+                android:textSize="15.5sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:textColor="@color/blackForText"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/goods_main_title_sample"
+                android:textSize="15sp"
+                android:textColor="@color/softBlackForText"
+                android:fontFamily="@font/roboto_regular"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_main_title_korean_sample"
+                android:textColor="@color/greyForText"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_regular"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/goods_main_size_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/goods_main_size_btn_korean_sample"
+                android:textAlignment="textStart"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_goods_main_size_btn"
+                android:background="@drawable/goods_main_size_btn_shape"
+                style="?android:attr/borderlessButtonStyle"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/goods_main_recent_bid_price_notification"
+                    android:textSize="11.5sp"
+                    android:textColor="@color/greyForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/goods_main_recent_bid_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goods_main_recent_bid_price_sample"
+                    android:textSize="18sp"
+                    android:textColor="@color/blackForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="9dp"
+                    android:layout_height="9dp"
+                    android:layout_marginEnd="2dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_goods_main_fluctuation_up"
+                    app:layout_constraintEnd_toStartOf="@id/goods_main_recent_bid_fluctuation"
+                    app:layout_constraintTop_toTopOf="@id/goods_main_recent_bid_fluctuation"
+                    app:layout_constraintBottom_toBottomOf="@id/goods_main_recent_bid_fluctuation"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/goods_main_recent_bid_fluctuation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/goods_main_recent_bid_price_fluctuation_sample"
+                    android:textSize="13sp"
+                    android:textColor="@color/redForText"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goods_main_recent_bid_price"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="@string/goods_main_information_notification"
+                android:textColor="@color/blackForText"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/goods_main_information_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/goods_main_ad"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_today_image_sample1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_main_market_condition"
+                android:textColor="@color/blackForText"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/softBlackForText"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/goods_main_style_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/goods_main_style"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/goods_main_style_count_sample"
+                    android:textSize="13sp"
+                    android:textColor="@color/greyForText"
+                    android:fontFamily="@font/roboto_medium"
+                    app:layout_constraintStart_toEndOf="@id/goods_main_style_tv"
+                    app:layout_constraintTop_toTopOf="@id/goods_main_style_tv"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/goods_main_upload_picture_btn_shape"
+                    android:text="@string/goods_main_upload_picture"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:background="@color/blackForText"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintTop_toBottomOf="@id/goods_main_style_tv"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

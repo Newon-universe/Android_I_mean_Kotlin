@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fcfcfc</color>
+    <color name="colorPrimaryDark">#889dfe</color>
+    <color name="colorAccent">#889dfe</color>
+
+    <!-- 기본 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="whiteForBackground">#FFFFFF</color>
+    <color name="blackForText">#010000</color>
+    <color name="greyForText">#9E9E9E</color>
+    <color name="softBlackForText">#333333</color>
+    <color name="redForText">#d9534f</color>
+    <color name="greenForText">#489463</color>
+    <color name="transparency">#00FFFFFF</color>
+    <color name="home_today_barrier_color">#4D9A9A9A</color>
+
+
+    <!-- home today -->
+    <color name="goods_sample">#F5EEED</color>
+
+    <!-- goods_view_main   -->
+    <color name="goods_main_btm_nav_btn_buy">#D3644C</color>
+    <color name="goods_main_btm_nav_btn_sell">#3A9961</color>
+    <color name="goods_main_btm_nav_divider">#0D000000</color>
+    <color name="goods_main_size_btn">#ECECEC</color>
+    <color name="goods_main_information_card">#80CFCFCF</color>
+    <color name="goods_before_check">#446F9E</color>
+
+    <!--  my  -->
+    <color name="my_profile_person_default_color">#D7D7D7</color>
+    <color name="my_profile_background_default_color">#F1F1F1</color>
+    <color name="my_profile_record_container">#F5F5F5</color>
+    <color name="my_login_naver">#00CB49</color>
+
+</resources>

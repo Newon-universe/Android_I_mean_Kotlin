@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    >
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/signup_sneakers_size_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_login_signup_size_check"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/blackForText"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/goods_bottom_sheet_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_goods_bottom_close"
+        android:tint="@color/black"
+        android:background="@color/transparency"
+        app:layout_constraintStart_toEndOf="@id/signup_sneakers_size_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintTop_toTopOf="@id/signup_sneakers_size_tv"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/goods_bottom_sheet_size_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/signup_sneakers_size_tv"
+        app:layout_constraintStart_toStartOf="@id/signup_sneakers_size_tv"
+        app:layout_constraintEnd_toEndOf="@id/signup_sneakers_size_tv"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

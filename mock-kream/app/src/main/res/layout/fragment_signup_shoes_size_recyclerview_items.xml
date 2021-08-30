@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:padding="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/signup_size_checker_btn"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:background="@drawable/goods_main_information_card_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/signup_size_checker_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/goods_bottom_recyclerview_size_sample"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/signup_size_checker_btn"
+        app:layout_constraintEnd_toEndOf="@id/signup_size_checker_btn"
+        app:layout_constraintBottom_toBottomOf="@id/signup_size_checker_btn"
+        app:layout_constraintTop_toTopOf="@id/signup_size_checker_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

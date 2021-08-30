@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/before_buy_toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp"
+        android:outlineProvider="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/before_buy_toolbar_container_back_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_goods_main_toolbar_arrow_back_24"
+            android:tint="@color/black"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/my_login_signup_title"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="@string/goods_before_inspection_standard"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackForText"
+            android:fontFamily="@font/roboto_medium"
+            android:src="@drawable/ic_goods_main_toolbar_arrow_back_24"
+            android:scaleType="fitXY"
+            android:background="@drawable/shape_grey_stroke_grey_tint"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@id/before_buy_toolbar_container_back_arrow"
+            app:layout_constraintBottom_toBottomOf="@id/before_buy_toolbar_container_back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?actionBarSize"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toBottomOf="@id/before_buy_toolbar_container">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/before_buy_notification"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/goods_before_buy_title"
+                android:textSize="24sp"
+                android:textColor="@color/blackForText"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/before_buy_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:shapeAppearanceOverlay="@style/rounded_corner"
+                app:srcCompat="@drawable/home_today_recycle_sample_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/before_buy_notification" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/before_buy_goods_brand"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/goods_before_buy_title"
+                android:textSize="12sp"
+                android:textColor="@color/blackForText"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                app:layout_constraintStart_toEndOf="@id/before_buy_image"
+                app:layout_constraintTop_toTopOf="@id/before_buy_image"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/before_buy_goods_title"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:text="@string/goods_main_title_sample"
+                android:textSize="12sp"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/before_buy_image"
+                app:layout_constraintTop_toBottomOf="@id/before_buy_goods_brand"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/before_buy_goods_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goods_bottom_recyclerview_size_sample"
+                android:textSize="12sp"
+                android:textColor="@color/blackForText"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@id/before_buy_image"
+                app:layout_constraintTop_toBottomOf="@id/before_buy_goods_title"
+                app:layout_constraintBottom_toBottomOf="@id/before_buy_image"/>
+
+            <View
+                android:id="@+id/before_buy_barrier"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/greyForText"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/before_buy_image"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_1_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_1_title"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/before_buy_barrier"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_1_content"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_1_content"
+                android:textSize="11sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_1_title"/>
+
+            <CheckBox
+                android:id="@+id/goods_before_buy_check_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/greyForText"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goods_before_buy_1_title"
+                app:layout_constraintBottom_toBottomOf="@id/goods_before_buy_1_title"/>
+
+            <View
+                android:id="@+id/goods_before_barrier1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_today_barrier_color"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_1_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_2_title"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_barrier1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_2_content"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_2_content"
+                android:textSize="11sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_2_title"/>
+
+            <CheckBox
+                android:id="@+id/goods_before_buy_check_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/greyForText"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goods_before_buy_2_title"
+                app:layout_constraintBottom_toBottomOf="@id/goods_before_buy_2_title"/>
+
+            <View
+                android:id="@+id/goods_before_barrier2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_today_barrier_color"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_2_content"/>
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_3_title"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_3_title"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_barrier2"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_3_content"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_3_content"
+                android:textSize="12sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_3_title"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_3_more_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/goods_before_inspection_standard_watch"
+                android:textSize="11sp"
+                android:textColor="@color/goods_before_check"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_3_content"
+                app:layout_constraintStart_toStartOf="@id/goods_before_buy_3_content"/>
+
+            <CheckBox
+                android:id="@+id/goods_before_buy_check_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/greyForText"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goods_before_buy_3_title"
+                app:layout_constraintBottom_toBottomOf="@id/goods_before_buy_3_title"/>
+
+            <View
+                android:id="@+id/goods_before_barrier3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_today_barrier_color"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_3_more_information"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_4_title"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_4_title"
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_barrier3"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_4_content"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:text="@string/goods_before_buy_4_content"
+                android:textSize="12sp"
+                android:textColor="@color/greyForText"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:fontFamily="@font/roboto_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_4_title"/>
+
+            <CheckBox
+                android:id="@+id/goods_before_buy_check_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/greyForText"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/goods_before_buy_4_title"
+                app:layout_constraintBottom_toBottomOf="@id/goods_before_buy_4_title"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/goods_before_buy_4_more_information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/goods_before_usage_policy_more"
+                android:textSize="11sp"
+                android:textColor="@color/goods_before_check"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_4_content"
+                app:layout_constraintStart_toStartOf="@id/goods_before_buy_4_content"/>
+
+            <View
+                android:id="@+id/goods_before_barrier4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/home_today_barrier_color"
+                android:layout_marginTop="25dp"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_buy_4_more_information"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/goods_before_buy_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:clickable="false"
+                android:text="@string/goods_before_buy_button"
+                android:textColor="@color/my_profile_background_default_color"
+                android:background="@drawable/shape_none_solid_rounded"
+                android:backgroundTint="@color/my_profile_person_default_color"
+                app:layout_constraintTop_toBottomOf="@id/goods_before_barrier4"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/before_buy_frame"
+        android:elevation="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

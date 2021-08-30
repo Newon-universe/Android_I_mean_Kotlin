@@ -1,0 +1,246 @@
+<resources>
+    <string name="app_name">KREAM - mock</string>
+
+    <!-- Naming Rules -->
+    <!-- 도메인명_컴포넌트함축어_용도(=목적) -->
+
+    <!-- Splash  -->
+    <string name="app_name_splash">KREAM</string>
+    <string name="app_description_splash">KICKS RULE EVERYTHING AROUND ME</string>
+
+    <!-- Common -->
+
+    <!-- Main -->
+    <string name="main_btm_nav_home_title">HOME</string>
+    <string name="main_btm_nav_style_title">STYLE</string>
+    <string name="main_btm_nav_shop_title">SHOP</string>
+    <string name="main_btm_nav_watch_title">WATCH</string>
+    <string name="main_btm_nav_my_page_title">MY</string>
+
+    <!-- Home -->
+    <string name="home_btn_try_get_http_method">GET API 보내기</string>
+    <string name="home_btn_try_post_http_method">POST API 보내기</string>
+    <string name="home_et_id">아이디를 입력하세요.</string>
+    <string name="home_et_pw">비밀번호를 입력하세요.</string>
+
+
+    <!-- Home_Today   -->
+    <string name="home_today_scroll_just_dropped">Just Dropped</string>
+    <string name="home_today_scroll_just_dropped_korean">발매 상품</string>
+    <string name="home_today_recycle_item_goods_name_sample">Jordan 1 x Travis Scott x Fragment Retro Low OG SP Military Blue</string>
+    <string name="home_today_recycle_item_goods_price_sample">1,249,000원</string>
+    <string name="home_today_recycle_item_goods_price_notification">즉시 구매가</string>
+    <string name="home_today_scroll_style_picks">Style Picks!</string>
+    <string name="home_today_recycle_style_user_profile">\@hyuny_haney</string>
+    <string name="home_today_scroll_most_popular">Most Popular</string>
+    <string name="home_today_scroll_most_popular_korean">인기 상품</string>
+    <string name="home_today_scroll_shoe_kream_tag">#shoeKREAM</string>
+    <string name="home_today_scroll_korean_collection">Korean Collection</string>
+    <string name="home_today_scroll_korean_collection_korean">추천 상품</string>
+    <string name="home_today_scroll_x_off_white">x Off-White</string>
+    <string name="home_today_scroll_x_off_white_korean">추천 상품</string>
+    <string name="home_today_scroll_lego">Lego</string>
+    <string name="home_today_scroll_lego_korean">추천 상품</string>
+    <string name="home_today_scroll_streetwear">Streetwear</string>
+    <string name="home_today_scroll_streetwear_korean">추천 상품</string>
+    <string name="home_today_scroll_small_leathers">Small Leathers</string>
+    <string name="home_today_scroll_small_leathers_korean">추천 상품</string>
+    <string name="home_today_scroll_contemporary">Contemporary</string>
+    <string name="home_today_scroll_contemporary_korean">추천 상품</string>
+    <string name="home_today_scroll_luxury_sneakers">Luxury Sneakers</string>
+    <string name="home_today_scroll_luxury_sneakers_korean">추천 상품</string>
+    <string name="home_today_scroll_new_lowest_asks">New Lowest Asks</string>
+    <string name="home_today_scroll_new_lowest_asks_korean">추천 상품</string>
+    <string name="home_today_scroll_new_highest_bids">New Highest Bids</string>
+    <string name="home_today_scroll_new_highest_bids_korean">추천 상품</string>
+    <string name="home_today_scroll_upcoming_release">Upcoming Release</string>
+    <string name="home_today_scroll_upcoming_release_korean">추천 상품</string>
+    <string name="home_today_recycle_upcoming_item_buy_button">구매</string>
+    <string name="home_today_scroll_orca_alternatives">Orca Alternatives</string>
+    <string name="home_today_scroll_orca_alternatives_korean">추천 상품</string>
+    <string name="home_today_scroll_grey_collection">Grey Collection</string>
+    <string name="home_today_scroll_grey_collection_korean">추천 상품</string>
+    <string name="home_today_scroll_customer_service_center">고객센터 1588\-7813</string>
+    <string name="home_today_scroll_customer_service_weekday_business_hour">운영시간 평일 11:00 \- 18:00 (토•일, 공휴일 휴무)</string>
+    <string name="home_today_scroll_customer_service_weekday_launch_break">점심시간 평일 13:00 \- 14:00</string>
+    <string name="home_today_scroll_frequently_asked">자주 묻는 질문</string>
+    <string name="home_today_scroll_one_on_one_ask">1:1 문의</string>
+    <string name="home_today_scroll_information_use">이용안내</string>
+    <string name="home_today_scroll_customer_support">고객지원</string>
+    <string name="home_today_scroll_inspection_standard">검수 기준</string>
+    <string name="home_today_scroll_notification">공지사항</string>
+    <string name="home_today_scroll_usage_policy">이용 정책</string>
+    <string name="home_today_scroll_service_introduction">서비스 소개</string>
+    <string name="home_today_scroll_penalty_policy">패널티 규정</string>
+    <string name="home_today_scroll_show_room_introduction">쇼룸 안내</string>
+    <string name="home_today_scroll_community_guide_line">커뮤니티 가이드라인</string>
+    <string name="home_today_scroll_seller_visit_reception">판매자 방문 접수</string>
+    <string name="home_today_scroll_terms_of_service">이용약관</string>
+    <string name="home_today_scroll_privacy_policy">개인정보처리방침</string>
+
+    <!-- Goods_main   -->
+    <string name="goods_main_brand_sample">Nike</string>
+    <string name="goods_main_title_sample">Nike x Underfeated Air Force 1 Low SP 5 On It</string>
+    <string name="goods_main_title_korean_sample">나이키 x 언디핏 에어포스 1 로우 SP 5 온 잇</string>
+    <string name="goods_main_size_btn_korean_sample">모든 사이즈</string>
+    <string name="goods_main_recent_bid_price_notification">최근 거래가</string>
+    <string name="goods_main_recent_bid_price_sample">210,000원</string>
+    <string name="goods_main_recent_bid_price_fluctuation_sample">13,000 (+6.6%)</string>
+    <string name="goods_main_information_notification">상품 정보</string>
+    <string name="goods_main_information_model_number">모델번호</string>
+    <string name="goods_main_information_model_sample">DM8461-001</string>
+    <string name="goods_main_information_released_date">출시일</string>
+    <string name="goods_main_information_released_date_sample">2021/08/20</string>
+    <string name="goods_main_information_primary_color">대표색상</string>
+    <string name="goods_main_information_primary_color_sample">GREY FOG/ IMPERIAL BLUE</string>
+    <string name="goods_main_information_released_price">발매가</string>
+    <string name="goods_main_information_released_price_sample">159,000원</string>
+    <string name="goods_main_market_condition">시세</string>
+    <string name="goods_main_style">스타일</string>
+    <string name="goods_main_style_count_sample">493</string>
+    <string name="goods_main_upload_picture">+ 사진 올리기</string>
+    <string name="goods_main_more_style">스타일 더보기</string>
+    <string name="goods_main_video">동영상</string>
+    <string name="goods_main_related_item_sample">Nike의 다른 상품</string>
+    <string name="goods_main_like">관심 상품 추가</string>
+
+    <!-- Goods before notification   -->
+    <string name="goods_before_inspection_standard">검수기준</string>
+    <string name="goods_before_usage_policy_more">이용정책 보기</string>
+    <string name="goods_before_buy_button">구매 계속</string>
+    <string name="goods_before_buy_title">구매하시기 전에 꼭 확인하세요.</string>
+    <string name="goods_before_buy_1_title">구매하려는 상품이 맞습니다.</string>
+    <string name="goods_before_buy_1_content">상품 이미지, 모델번호, 출시일, 상품명, 사이즈를 한 번 더 확인했습니다.</string>
+    <string name="goods_before_buy_2_title">국내/해외에서 발매한 정품•새상품입니다.</string>
+    <string name="goods_before_buy_2_content">모든 구성품이 그대로이며, 한 번도 착용하지 않은\n정품 • 새상품입니다. 국내 발매 상품 여부는 확인드리지 않습니다.</string>
+    <string name="goods_before_buy_3_title">제조사에서 불량으로 인정하지 않는 기준은 하자로 판단하지 않습니다.</string>
+    <string name="goods_before_buy_3_content">박스/패키지와 상품 컨디션에 민감하시다면 검수 기준을 반드시 확인하시기 바랍니다.</string>
+    <string name="goods_before_buy_4_title">KREAM의 최신 이용정책을 모두 확인하였으며, 구매를 계속합니다.</string>
+    <string name="goods_before_buy_4_content">건전하고 안전한 거래를 위해 반드시 숙지해야 할 미입고, 패널티, 부정거래 등의 이용정책을 확인헸습니다.</string>
+
+
+    <string name="goods_before_inspection_standard_watch">검수기준 보기</string>
+
+
+    <string name="goods_before_sell_btn">판매 계속</string>
+    <string name="goods_before_sell_title">판매하시기 전에 꼭 확인하세요.</string>
+    <string name="goods_before_sell_1_title">판매하려는 상품이 맞습니다.</string>
+    <string name="goods_before_sell_1_content">상품 이미지, 모델번호, 출시일, 상품명, 사이즈를 한 번 더 확인했습니다.</string>
+    <string name="goods_before_sell_2_title">국내/해외에서 발매한 정품•새상품입니다.</string>
+    <string name="goods_before_sell_2_content">모든 구성품이 그대로이며, 한 번도 착용하지 않은\n정품 • 새상품입니다. 중고품 판매는 불가능합니다.</string>
+    <string name="goods_before_sell_3_title">박스/패키지의 상태를 확인합니다.</string>
+    <string name="goods_before_sell_3_content">박스/패키지 상태에 따른 검수 기준을 확인했습니다.</string>
+    <string name="goods_before_sell_4_title">이중 포장하여 선불 발송합니다.</string>
+    <string name="goods_before_sell_4_content">반드시 이중 포장하여 택배 사장에 담아 선불 발송합니다. 합배송은 권장하지 않으며 이로 인한 박스/패키지 훼손은 판매자의\n책임입니다.</string>
+    <string name="goods_before_sell_5_title">KREAM의 최신 이용 정책을 모두 확인하였으며, 판매를 계속합니다.</string>
+    <string name="goods_before_sell_5_content">건전하고 안전한 거래를 위해 반드시 숙지해야 할 미입고, 패널티, 부정거래 등의 이용정책을 확인헸습니다.</string>
+
+
+    <string name="goods_final_immediately_buy_price">즉시 구매가</string>
+    <string name="goods_final_immediately_buy_price_sample">1,348,000원</string>
+    <string name="goods_final_immediately_sell_price">즉시 판매가</string>
+    <string name="goods_final_immediately_sell_price_sample">1,250,000원</string>
+    <string name="goods_final_bid_order">구매 입찰</string>
+    <string name="goods_final_sell_bid_order">판매 입찰</string>
+    <string name="goods_final_immediately_buy">즉시 구매</string>
+    <string name="goods_final_immediately_sell">즉시 판매</string>
+    <string name="goods_final_if_buy">즉시 구매가</string>
+    <string name="goods_final_point">포인트</string>
+    <string name="goods_final_inspection_fee">검수비</string>
+    <string name="goods_final_sell_fee">판매 수수료</string>
+    <string name="goods_final_delivery_fee">배송비</string>
+    <string name="good_final_destination">배송 주소</string>
+    <string name="goods_final_destination_hint">배송지를 등록하세요</string>
+    <string name="goods_final_buy_price">총 결제금액</string>
+    <string name="goods_final_buy_btn">즉시 구매 계속</string>
+    <string name="goods_final_sell_btn">즉시 판매 계속</string>
+    <string name="goods_final_sell_delivery_fee">선불 • 판매자 부담</string>
+
+
+
+
+    <!-- Goods_buy & sell bottom sheet fragment   -->
+    <string name="goods_bottom_sheet_size">사이즈</string>
+    <string name="goods_bottom_sheet_immediately_buy">즉시 구매가(원)</string>
+    <string name="goods_bottom_sheet_immediately_sell">즉시 판매가(원)</string>
+    <string name="goods_bottom_recyclerview_size_sample">260</string>
+    <string name="goods_bottom_recyclerview_price_sample">1,618,000원</string>
+
+    <!--  Goods_bottom_nav  -->
+    <string name="goods_bottom_nav_interest_count_sample">1,464</string>
+    <string name="goods_bottom_nav_buy_btn_title">구매</string>
+    <string name="goods_bottom_nav_buy_btn_immediately_price">즉시 구매가</string>
+    <string name="goods_bottom_nav_buy_price_sample">236,000원</string>
+    <string name="goods_bottom_nav_sell_btn_title">판매</string>
+    <string name="goods_bottom_nav_sell_btn_immediately_price">즉시 판매가</string>
+    <string name="goods_bottom_nav_sell_price_sample">310,000원</string>
+
+
+    <!-- MyPage -->
+    <string name="my_page_tv_counter">%1d 번 눌렀습니다.</string>
+    <string name="my_page_btn_counting_number">숫자 세기</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- My   -->
+    <string name="my_shop_nickname_sample">0hug9q</string>
+    <string name="my_shop_profile_edit">프로필 편집</string>
+    <string name="my_shop_id_sample">www6370</string>
+    <string name="my_shop_grade_sample">일반</string>
+    <string name="my_shop_grade_notification">회원 등급</string>
+    <string name="my_shop_point_sample">0</string>
+    <string name="my_shop_point_scale">P</string>
+    <string name="my_shop_point_notification">포인트</string>
+    <string name="my_shop_interest_sample">1</string>
+    <string name="my_shop_interest_notification">관심 상품</string>
+    <string name="my_shop_buy_record">구매 내역</string>
+    <string name="my_shop_buy_record_more">더보기</string>
+    <string name="my_shop_sell_record">판매 내역</string>
+    <string name="my_shop_sell_record_more">더보기</string>
+    <string name="my_shop_record_total">전체</string>
+    <string name="my_shop_record_biding">입찰 중</string>
+    <string name="my_shop_record_progressing">진행 중</string>
+    <string name="my_shop_record_done">종료</string>
+    <string name="my_shop_record_none">-</string>
+    <string name="my_shop_record_total_none">0</string>
+    <string name="my_shop_holding_items_notification">보유 상품</string>
+    <string name="my_shop_holding_total_value">총 평가금액</string>
+    <string name="my_shop_holding_count">보유 수량</string>
+    <string name="my_shop_holding_bought_price">총 구매가</string>
+    <string name="my_shop_holding_yield">총 수익률</string>
+    <string name="my_shop_holding_valuation_p_l">평가 손익</string>
+    <string name="my_login_email_address">이메일 주소</string>
+    <string name="my_login_password">비밀번호</string>
+    <string name="my_login">로그인</string>
+    <string name="my_login_with_naver">네이버로 로그인</string>
+    <string name="my_login_find_email">이메일 찾기</string>
+    <string name="my_login_find_password">비밀번호 찾기</string>
+    <string name="my_login_sign_up_notification">아직 가입하지 않으셨나요? </string>
+    <string name="my_login_sign_up">이메일로 가입 </string>
+    <string name="my_login_find_email_title">이메일 아이디 찾기</string>
+    <string name="my_login_find_email_notification">가입 시 등록한 휴대폰 번호를 입력하면 이메일 주소의 일부를 알려드립니다.</string>
+    <string name="my_login_find_email_result_notification">이메일 주소 찾기를 성공하였습니다.</string>
+    <string name="my_login_find_email_result_email_address">이메일 주소</string>
+    <string name="my_login_find_email_result_email_sample">w*******0@naver.com</string>
+    <string name="my_login_find_email_phone_number_notification">핸드폰 번호</string>
+    <string name="my_login_find_email_phone_hint">가입한 휴대폰 번호</string>
+    <string name="my_login_find_email_btn">이메일 찾기</string>
+    <string name="my_login_find_password_title">비밀번호 찾기</string>
+    <string name="my_login_find_password_notification">가입 시 등록하신 휴대폰 번호와 이메일을 입력하시면, 휴대폰으로 임식 비밀번호를 전송해 드립니다. 비밀번호 찾기에 어려움이 있으시다면 고객센터 1588-7813으로 문의바랍니다.</string>
+    <string name="my_login_find_password_email_hint">가입한 이메일 주소</string>
+    <string name="my_login_find_password_btn">문자로 발송하기</string>
+    <string name="my_login_signup_title">회원가입</string>
+    <string name="my_login_signup_email_address">이메일 주소 *</string>
+    <string name="my_login_signup_password">비밀번호 *</string>
+    <string name="my_login_signup_sneakers_size">스니커즈 사이즈</string>
+    <string name="my_login_signup_sneakers_size_hint">선택하세요</string>
+    <string name="my_login_signup_btn">가입하기</string>
+    <string name="my_login_signup_size_check">사이즈 선택</string>
+    <string name="my_login_mandatory_text">[필수] 만14세 이상이며 모두 동의합니다.</string>
+    <string name="my_login_non_mandatory_text">[선택]광고성 정보 수신에 모두 동의합니다.</string>
+    <string name="my_login_sign_up_pass_title">PASS</string>
+    <string name="my_login_sign_up_name">이름</string>
+    <string name="my_login_sign_up_name_hint">이름입력</string>
+    <string name="my_login_options_title">설정</string>
+    <string name="my_login_logout">로그아웃</string>
+
+</resources>

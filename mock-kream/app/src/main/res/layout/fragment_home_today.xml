@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/home_main_today_nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/home_today_ad_pager"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:scrollIndicators="bottom"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_just_dropped"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_just_dropped_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_just_dropped_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_style_picks"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_style_picks_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/transparency" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_1"
+                android:layout_width="match_parent"
+                android:layout_height="375dp"
+                android:src="@drawable/home_today_image_sample1"
+                android:scaleType="fitXY"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@color/transparency" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_most_popular"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_most_popular_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_most_popular_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_shoe_kream_tag"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_shoe_kream_tag_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_2"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample2"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_korean_collection"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_korean_collection_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_korea_collection_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_3"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample3"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_x_off_white"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_x_off_white_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_x_off_white_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_4"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample4"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_lego"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_lego_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_lego_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_5"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample5"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_streetwear"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_streetwear_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_streetwear_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_6"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample6"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_small_leathers"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_small_leathers_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_small_leathers_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_contemporary"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_contemporary_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_contemporary_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_7"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample7"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_luxury_sneakers"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_luxury_sneakers_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_luxury_sneakers_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_8"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample8"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_new_lowest_asks"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_new_lowest_asks_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_new_lowest_asks_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/home_today_barrier_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_new_highest_bids"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_new_highest_bids_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_new_highest_bids_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_9"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample9"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_upcoming_release"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_upcoming_release_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_upcoming_release_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_10"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample10"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_orca_alternatives"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_orca_alternatives_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_orca_alternatives_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_11"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:src="@drawable/home_today_image_sample11"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/home_today_scroll_grey_collection"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="15.5sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_grey_collection_korean"
+                android:textColor="@color/greyForText"
+                android:textSize="15.5sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_today_grey_collection_recyclerview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/home_today_ad_12"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginBottom="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/home_today_image_sample12" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_today_scroll_customer_service_center"
+                android:textColor="@color/blackForText"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_customer_service_weekday_business_hour"
+                android:textColor="@color/greyForText"
+                android:textSize="11sp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/home_today_scroll_customer_service_weekday_launch_break"
+                android:textColor="@color/greyForText"
+                android:textSize="11sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_today_frequently_asked_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/home_today_scroll_frequently_asked"
+                android:layout_marginStart="10dp"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@color/transparency"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_today_one_on_one_ask_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_today_scroll_one_on_one_ask"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="11sp"
+                android:gravity="center_vertical"
+                android:background="@color/transparency"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/home_today_scroll_information_use_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_information_use"
+                    android:textColor="@color/blackForText"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/home_today_scroll_customer_service_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_today_scroll_customer_support"
+                    android:textColor="@color/blackForText"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/home_today_scroll_information_use_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_inspection_standard_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_inspection_standard"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_information_use_tv"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_information_use_tv"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_usage_policy_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_usage_policy"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_inspection_standard_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_inspection_standard_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_penalty_policy_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_penalty_policy"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_usage_policy_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_usage_policy_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_community_guide_line_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_community_guide_line"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_penalty_policy_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_penalty_policy_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_notification_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_notification"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_customer_service_tv"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_customer_service_tv"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_service_introduction_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_service_introduction"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_notification_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_notification_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_show_room_introduction_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_show_room_introduction"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_service_introduction_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_service_introduction_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/home_today_scroll_seller_visit_reception_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="@string/home_today_scroll_seller_visit_reception"
+                    android:background="@color/transparency"
+                    android:gravity="start|center_vertical"
+                    android:textColor="@color/blackForText"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textSize="11sp"
+                    app:layout_constraintTop_toBottomOf="@id/home_today_scroll_show_room_introduction_btn"
+                    app:layout_constraintStart_toStartOf="@id/home_today_scroll_show_room_introduction_btn"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_today_scroll_terms_of_service_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_today_scroll_terms_of_service"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="11sp"
+                android:gravity="center_vertical"
+                android:background="@color/transparency"
+                android:layout_marginTop="35dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/home_today_scroll_privacy_policy_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/home_today_scroll_privacy_policy"
+                android:textColor="@color/blackForText"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:background="@color/transparency"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
