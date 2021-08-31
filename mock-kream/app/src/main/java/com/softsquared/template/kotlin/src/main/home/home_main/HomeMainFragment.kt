@@ -50,10 +50,16 @@ class HomeMainFragment: BaseFragment<FragmentHomeMainBinding>(FragmentHomeMainBi
         val tabLayout = binding.homeTabLayout
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             when(position) {
-                0 -> tab.text = "투데이"
-                1 -> tab.text = "발매정보"
+                0 -> {
+                    tab.text = "투데이"
+                    tab.setIcon(R.drawable.home_main_tab_today)
+                }
+                1 -> {
+                    tab.text = "발매정보"
+                }
             }
         }.attach()
+
         tabLayout.pointerIcon
         tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"))
 
