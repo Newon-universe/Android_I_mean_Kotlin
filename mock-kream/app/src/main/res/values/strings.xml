@@ -25,6 +25,7 @@
 
 
     <!-- Home_Today   -->
+    <string name="home_today_tab">투데이</string>
     <string name="home_today_scroll_just_dropped">Just Dropped</string>
     <string name="home_today_scroll_just_dropped_korean">발매 상품</string>
     <string name="home_today_recycle_item_goods_name_sample">Jordan 1 x Travis Scott x Fragment Retro Low OG SP Military Blue</string>
@@ -77,6 +78,10 @@
     <string name="home_today_scroll_seller_visit_reception">판매자 방문 접수</string>
     <string name="home_today_scroll_terms_of_service">이용약관</string>
     <string name="home_today_scroll_privacy_policy">개인정보처리방침</string>
+
+    <!-- 발매정보   -->
+    <string name="home_released_tab">발매정보</string>
+
 
     <!-- Goods_main   -->
     <string name="goods_main_brand_sample">Nike</string>
@@ -174,6 +179,20 @@
     <string name="goods_bottom_nav_sell_btn_title">판매</string>
     <string name="goods_bottom_nav_sell_btn_immediately_price">즉시 판매가</string>
     <string name="goods_bottom_nav_sell_price_sample">310,000원</string>
+
+
+    <!-- Shop Main  -->
+    <string name="shop_search_hint">브랜드명, 모델명, 모델번호 등</string>
+    <string name="shop_chip_luxury">럭셔리</string>
+    <string name="shop_chip_sneakers">스니커즈</string>
+    <string name="shop_chip_clothes">의류</string>
+    <string name="shop_chip_fashions">패션 잡화</string>
+    <string name="shop_chip_life">라이프</string>
+    <string name="shop_chip_tech">테크</string>
+    <string name="shop_main_notification">상품</string>
+    <string name="shop_main_notification_sample_count">22,185</string>
+    <string name="shop_main_filter">인기순</string>
+    <string name="shop_type_sample_sample_text">Jordan 1</string>
 
 
     <!-- MyPage -->

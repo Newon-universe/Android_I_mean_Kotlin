@@ -227,12 +227,8 @@
                 android:textColor="@color/blackForText"
                 android:textSize="13sp"
                 android:textStyle="bold"
-                android:fontFamily="@font/roboto_regular"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="450dp"
-                android:background="@color/softBlackForText"/>
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="15dp"/>
 
             <View
                 android:layout_width="match_parent"
@@ -300,42 +296,42 @@
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample1"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/goods_main_style_image2"
                     android:layout_width="128dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample2"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/goods_main_style_image3"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample3"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/goods_main_style_image4"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample4"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/goods_main_style_image5"
                     android:layout_width="128dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample5"/>
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/goods_main_style_image6"
                     android:layout_width="130dp"
                     android:layout_height="130dp"
                     android:layout_marginEnd="3dp"
                     android:layout_marginTop="3dp"
-                    android:background="@color/blackForText"/>
+                    android:background="@drawable/goods_style_sample6"/>
             </GridLayout>
 
             <androidx.appcompat.widget.AppCompatButton

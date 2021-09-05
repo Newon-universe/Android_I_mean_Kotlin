@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_oval_solid_white_for_tab"
+        android:text="@string/home_today_tab"
+        android:textColor="@color/blackForText"
+        android:fontFamily="@font/roboto_medium" />
+
+</LinearLayout>

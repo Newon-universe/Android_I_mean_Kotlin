@@ -1,20 +1,14 @@
 package com.softsquared.template.kotlin.src.main.home.home_main
 
-import android.app.Service
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import androidx.core.view.get
+import android.os.Handler
+import android.os.Message
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.softsquared.template.kotlin.R
 import com.softsquared.template.kotlin.config.BaseFragment
-import com.softsquared.template.kotlin.databinding.ActivityGoodsMainBinding
 import com.softsquared.template.kotlin.databinding.FragmentHomeMainBinding
 import com.softsquared.template.kotlin.src.goods.GoodsMain
 import com.softsquared.template.kotlin.src.main.home.home_launch.HomeLaunchFragment
@@ -36,11 +30,10 @@ class HomeMainFragment: BaseFragment<FragmentHomeMainBinding>(FragmentHomeMainBi
 
 
         val viewPager = binding.homePager
-
         viewPager.adapter = pagerAdapter
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
+            override fun onPageScrollStateChanged(state: Int) {
+                super.onPageScrollStateChanged(state)
             }
         })
         viewPager.isUserInputEnabled = false
@@ -52,7 +45,6 @@ class HomeMainFragment: BaseFragment<FragmentHomeMainBinding>(FragmentHomeMainBi
             when(position) {
                 0 -> {
                     tab.text = "투데이"
-                    tab.setIcon(R.drawable.home_main_tab_today)
                 }
                 1 -> {
                     tab.text = "발매정보"
@@ -60,29 +52,9 @@ class HomeMainFragment: BaseFragment<FragmentHomeMainBinding>(FragmentHomeMainBi
             }
         }.attach()
 
-        tabLayout.pointerIcon
         tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"))
 
-//        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
-//            override fun onTabSelected(tab: TabLayout.Tab?){
-//            }
-//
-//            override fun onTabUnselected(tab: TabLayout.Tab?) {
-//                TODO("Not yet implemented")
-//            }
-//
-//            override fun onTabReselected(tab: TabLayout.Tab?) {
-//                TODO("Not yet implemented")
-//            }
-//
-//        })
     }
 
-    private fun getTabItem(position: Int): String?{
-        return when(position){
-            0 -> "투데이"
-            1 -> "발매정보"
-            else -> null
-        }
-    }
+
 }

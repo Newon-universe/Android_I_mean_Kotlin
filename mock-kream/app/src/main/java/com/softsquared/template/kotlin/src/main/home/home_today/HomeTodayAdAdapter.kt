@@ -22,13 +22,13 @@ class HomeTodayAdAdapter(adList: List<Mainslider>): RecyclerView.Adapter<HomeTod
 
     override fun onBindViewHolder(holder: HomeTodayAdAdapter.PagerViewHolder, position: Int) {
         Glide.with(holder.itemView.context)
-            .load(item[position].img)
+            .load(item[position%item.size].img)
             .into(holder.ad)
     }
 
 
     override fun getItemCount(): Int {
-        return item.size
+        return Int.MAX_VALUE
     }
 
 

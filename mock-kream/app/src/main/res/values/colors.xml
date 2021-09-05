@@ -8,6 +8,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
 
+    <color name="transparency30_white">#4DFFFFFF</color>
     <color name="whiteForBackground">#FFFFFF</color>
     <color name="blackForText">#010000</color>
     <color name="greyForText">#9E9E9E</color>
@@ -16,6 +17,8 @@
     <color name="greenForText">#489463</color>
     <color name="transparency">#00FFFFFF</color>
     <color name="home_today_barrier_color">#4D9A9A9A</color>
+    <color name="greyForEditText">#F0EFEF</color>
+
 
 
     <!-- home today -->

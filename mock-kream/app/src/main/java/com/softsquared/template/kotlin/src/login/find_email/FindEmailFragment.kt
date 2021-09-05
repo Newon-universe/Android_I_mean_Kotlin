@@ -49,12 +49,7 @@ class FindEmailFragment : BaseFragment<FragmentFindEmailBinding>(FragmentFindEma
             val bundle = Bundle()
             bundle.putString("email", responseEmail)
 
-            childFragmentManager.beginTransaction()
-                .replace(R.id.find_email_result_fragment, FindEmailResultFragment().apply{
-                    arguments = bundle
-                })
-                .addToBackStack(null)
-                .commit()
+
         }
 
     }
