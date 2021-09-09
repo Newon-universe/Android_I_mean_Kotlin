@@ -27,3 +27,7 @@
 </span>  
   
 5. 뷰페이저 무한스크롤 시(인트 MAX 로 구현) 인디케이터 설정 문제
+
+
+# Jetpack compose MVVP 모델로 To-do List 만들기  
+1. Jetpack compose Side effect의 사용방법이 아직 감에 안옴
