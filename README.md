@@ -30,4 +30,5 @@
 
 
 # Jetpack compose MVVP 모델로 To-do List 만들기  
-1. Jetpack compose Side effect의 사용방법이 아직 감에 안옴
+1. Jetpack compose Side effect의 사용방법이 아직 감에 안옴  
+2. Jetpack compose ROOM 은 적용하고, 이해했는데 Dagger-hilt 는 아예 감이 안옴. 왜 쓰는걸까 ..? 😕
